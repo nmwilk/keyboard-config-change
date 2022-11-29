@@ -1,6 +1,6 @@
 # keyboard-config-change
 
-Demonstrates issue with Activity being recreated when USB keyboard attached/deattached from device.
+Demonstrates issue with Activity being recreated when USB keyboard attached/detached from device.
 
 MainActivity shows its instance number on screen, and is set to use `android:configChanges="keyboard|keyboardHidden|orientation"`. 
 
@@ -12,4 +12,4 @@ Keyboards tested:
 
 2/ Vissles LP85
 
-Attaching/deattaching the Samsung Galaxy Tab S7 Keyboard Cover to the Tab S7 does not restart the Activity.
+Attaching/detaching the Samsung Galaxy Tab S7 Keyboard Cover to the Tab S7 does not restart the Activity.
