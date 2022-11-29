@@ -9,6 +9,7 @@ The instance number does not change when changing from portrait to landscape, bu
 Keyboards tested:
 
 1/ Rii RT518 (wireless keyboard and trackpad)
+
 2/ Vissles LP85
 
 Attaching/deattaching the Samsung Galaxy Tab S7 Keyboard Cover to the Tab S7 does not restart the Activity.
