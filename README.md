@@ -6,6 +6,8 @@ MainActivity shows its instance number on screen, and is set to use `android:con
 
 The instance number does not change when changing from portrait to landscape, but it does change when plugging in and unplugging a USB keyboard.
 
+If `android:configChanges="orientation"` is used, then the instance number goes up by two each time.
+
 Keyboards tested:
 
 1/ Rii RT518 (wireless keyboard and trackpad)
