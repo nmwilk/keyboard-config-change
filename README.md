@@ -17,5 +17,7 @@ Attaching/detaching the Samsung Galaxy Tab S7 Keyboard Cover to the Tab S7 does 
 Devices tested:
 
 1/ Pixel 7
+
 2/ Samsung Tab S7
+
 3/ Samsung Fold 3
