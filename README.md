@@ -1,5 +1,7 @@
 # keyboard-config-change
 
+Update: it turns out that the `navigation` option is also required to prevent the Activity from being restarted.
+
 Demonstrates issue with Activity being recreated when USB keyboard attached/detached from device.
 
 MainActivity shows its instance number on screen, and is set to use `android:configChanges="keyboard|keyboardHidden|orientation"`. 
