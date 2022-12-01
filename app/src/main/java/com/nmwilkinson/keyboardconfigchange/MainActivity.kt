@@ -1,16 +1,17 @@
 package com.nmwilkinson.keyboardconfigchange
 
 import android.annotation.SuppressLint
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        var instanceCounter = 0
+        var onCreateCounter = 0
+        var onDestroyCounter = 0
+        var configChangedCounter = 0
     }
-
-    private var instanceNumber = ++instanceCounter
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,25 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        findViewById<TextView>(R.id.label).text = "Instance $instanceNumber"
+        ++onCreateCounter
+        updateViews()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        ++configChangedCounter
+        updateViews()
+    }
+
+    override fun onDestroy() {
+        ++onDestroyCounter
+        updateViews()
+        super.onDestroy()
+    }
+
+    private fun updateViews() {
+        findViewById<TextView>(R.id.configChanged).text = "onConfigChanged $configChangedCounter"
+        findViewById<TextView>(R.id.onCreate).text = "onCreate $onCreateCounter"
+        findViewById<TextView>(R.id.onDestroy).text = "onDestroy $onDestroyCounter"
     }
 }
